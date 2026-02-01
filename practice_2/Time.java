@@ -1,11 +1,11 @@
 package practice_2;
 
 public class Time {
-    Integer hour;
-    Integer minute;
-    Integer second;
+    int hour;
+    int minute;
+    int second;
 
-    public Time(Integer hour, Integer minute, Integer second) {
+    public Time(int hour, int minute, int second) {
         if (!isValid(hour, minute, second)) {
             throw new IllegalArgumentException("Invalid time provided");
         }
@@ -15,7 +15,7 @@ public class Time {
         this.second = second;
     }
 
-    public boolean isValid(Integer hour, Integer minute, Integer second) {
+    public boolean isValid(int hour, int minute, int second) {
         return (hour >= 0 && hour <= 23) &&
                 (minute >= 0 && minute <= 59) &&
                 (second >= 0 && second <= 59);
@@ -35,7 +35,7 @@ public class Time {
     }
 
     public void add(Time other) {
-        Integer totalSeconds = this.hour * 3600 + this.minute * 60 + this.second + other.hour * 3600
+        int totalSeconds = this.hour * 3600 + this.minute * 60 + this.second + other.hour * 3600
                 + other.minute * 60 + other.second;
         this.hour = (totalSeconds / 3600) % 24;
         this.minute = (totalSeconds % 3600) / 60;

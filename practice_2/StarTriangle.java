@@ -1,9 +1,9 @@
 package practice_2;
 
 public class StarTriangle {
-    Integer width;
+    int width;
 
-    public StarTriangle(Integer width) {
+    public StarTriangle(int width) {
         this.width = width;
     }
 

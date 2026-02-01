@@ -7,7 +7,7 @@ public class Problem3 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("grade = ");
-        Integer grade = scanner.nextInt();
+        int grade = scanner.nextInt();
         scanner.close();
 
         String letterGrade;

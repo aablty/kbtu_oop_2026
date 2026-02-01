@@ -7,11 +7,11 @@ public class Problem4 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("a = ");
-        Integer a = scanner.nextInt();
+        int a = scanner.nextInt();
         System.out.println("b = ");
-        Integer b = scanner.nextInt();
+        int b = scanner.nextInt();
         System.out.println("c = ");
-        Integer c = scanner.nextInt();
+        int c = scanner.nextInt();
         scanner.close();
 
         double discriminant = b * b - 4.0 * a * c;

@@ -7,11 +7,11 @@ public class Problem2 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("a = ");
-        Integer side = scanner.nextInt();
+        int side = scanner.nextInt();
         scanner.close();
 
-        Integer area = side * side;
-        Integer perimeter = 4 * side;
+        int area = side * side;
+        int perimeter = 4 * side;
         Float diagonal = (float) Math.sqrt(2) * side;
         System.out.println("S = " + area);
         System.out.println("P = " + perimeter);
