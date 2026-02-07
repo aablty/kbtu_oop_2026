@@ -9,18 +9,15 @@ public class DragonLaunch {
         people = new Vector<>();
     }
 
-    public void kidnap(Person p) {
+    public Person kidnap(Person p) {
         people.add(p);
-        System.out.println("kidnapped: " + p);
+        return p;
     }
 
     public boolean willDragonEatOrNot() {
         if (people.isEmpty()) {
             return false;
         }
-
-        System.out.println("\ninitial line:");
-        printLine();
 
         int writeIndex = 0;
 
@@ -32,8 +29,7 @@ public class DragonLaunch {
                 Person last = people.get(writeIndex - 1);
 
                 if (last.getGender() == Gender.BOY && current.getGender() == Gender.GIRL) {
-                    writeIndex--; // remove the last person 
-                    System.out.println(last.getName() + " and " + current.getName() + " disappeared.");
+                    writeIndex--; // remove the last person
                     continue;
                 }
             }
@@ -44,35 +40,9 @@ public class DragonLaunch {
 
         people.setSize(writeIndex);
 
-        System.out.println("\nfinal line:");
-        printLine();
-
         int remaining = people.size();
-        System.out.println("\nremaining people: " + remaining);
 
-        if (remaining > 0) {
-            System.out.println("the dragon will eat them!");
-            return true;
-        } else {
-            System.out.println("the dragon will not eat anyone!");
-            return false;
-        }
-    }
-
-    private void printLine() {
-        if (people.isEmpty()) {
-            System.out.println("_");
-            return;
-        }
-
-        for (Person p : people) {
-            System.out.print(p.getGender() == Gender.BOY ? "B" : "G");
-        }
-        System.out.print(" -> ");
-        for (Person p : people) {
-            System.out.print(p.getName() + " ");
-        }
-        System.out.println();
+        return remaining > 0 ? true : false;
     }
 
     public void reset() {
