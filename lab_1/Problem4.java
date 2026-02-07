@@ -9,7 +9,8 @@ public class Problem4 {
         Scanner scanner = new Scanner(System.in);
 
         Course course = new Course("CS101", "Object-oriented Programming and Design", 4);
-        course.addPrerequisite("CS100");
+        Course prereq1 = new Course("CS100", "Programming Principles 2", 4);
+        course.addPrerequisite(prereq1);
 
         GradeBook gradeBook = new GradeBook(course);
 
