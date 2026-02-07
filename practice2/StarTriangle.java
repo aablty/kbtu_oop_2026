@@ -1,4 +1,4 @@
-package practice_2;
+package practice2;
 
 public class StarTriangle {
     private int width;

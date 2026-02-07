@@ -1,8 +1,9 @@
-package lab_1;
+package lab1;
 
-import practice_2.Student;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import practice2.Student;
 
 public class Problem4 {
     public static void main(String[] args) {

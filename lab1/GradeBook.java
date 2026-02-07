@@ -1,7 +1,8 @@
-package lab_1;
+package lab1;
 
-import practice_2.Student;
 import java.util.ArrayList;
+
+import practice2.Student;
 
 class GradeBook {
     private Course course;
