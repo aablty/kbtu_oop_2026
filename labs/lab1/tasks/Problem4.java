@@ -1,9 +1,10 @@
-package lab1;
+package labs.lab1.tasks;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import practice2.Student;
+import labs.lab1.models.Course;
+import labs.lab1.models.GradeBook;
+import practices.practice2.models.Student;
 
 public class Problem4 {
     public static void main(String[] args) {

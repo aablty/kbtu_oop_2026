@@ -1,4 +1,4 @@
-package lab1;
+package labs.lab1.models;
 
 import java.util.Vector;
 

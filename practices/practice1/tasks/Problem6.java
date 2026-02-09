@@ -1,4 +1,4 @@
-package practice1;
+package practices.practice1.tasks;
 
 public class Problem6 {
     public static boolean isPalindrome(String str) {

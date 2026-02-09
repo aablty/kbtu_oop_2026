@@ -1,9 +1,9 @@
-package lab1;
+package labs.lab1.models;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-class Course {
+public class Course {
     private String name;
     private String description;
     private int credits;
