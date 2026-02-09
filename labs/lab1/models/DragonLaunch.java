@@ -19,30 +19,30 @@ public class DragonLaunch {
             return false;
         }
 
-        int writeIndex = 0;
+        int stackTop = 0;
 
-        for (int readIndex = 0; readIndex < people.size(); readIndex++) {
-            Person current = people.get(readIndex);
+        for (int i = 0; i < people.size(); i++) {
+            Person current = people.get(i);
 
-            // if current person and last is B-G pair
-            if (writeIndex > 0) {
-                Person last = people.get(writeIndex - 1);
+            // if current person BOY and last person in stack GIRL
+            if (stackTop > 0) {
+                Person lastInStack = people.get(stackTop - 1);
 
-                if (last.getGender() == Gender.BOY && current.getGender() == Gender.GIRL) {
-                    writeIndex--; // remove the last person
+                if (lastInStack.getGender() == Gender.BOY && current.getGender() == Gender.GIRL) {
+                    stackTop--; // Remove the pair (dragon eats them)
                     continue;
                 }
             }
 
-            people.set(writeIndex, current);
-            writeIndex++;
+            // add current person to stack
+            people.set(stackTop, current);
+            stackTop++;
         }
 
-        people.setSize(writeIndex);
+        // resize the vector to match the stack size
+        people.setSize(stackTop);
 
-        int remaining = people.size();
-
-        return remaining > 0 ? true : false;
+        return !people.isEmpty();
     }
 
     public void reset() {
