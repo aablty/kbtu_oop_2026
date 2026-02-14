@@ -3,11 +3,7 @@ package labs.lab1.models;
 import java.util.Vector;
 
 public class DragonLaunch {
-    private Vector<Person> people;
-
-    public DragonLaunch() {
-        people = new Vector<>();
-    }
+    private Vector<Person> people = new Vector<Person>();
 
     public Person kidnap(Person p) {
         people.add(p);

@@ -33,16 +33,6 @@ public class GradeBook {
         }
     }
 
-    public void setGrade(int studentIndex, int grade) {
-        if (studentIndex >= 0 && studentIndex < students.size() && grade >= 0 && grade <= 100) {
-            if (studentIndex < grades.size()) {
-                grades.set(studentIndex, grade);
-            } else {
-                grades.add(grade);
-            }
-        }
-    }
-
     public Course getCourse() {
         return course;
     }

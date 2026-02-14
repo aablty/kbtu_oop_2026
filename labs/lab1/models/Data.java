@@ -2,14 +2,8 @@ package labs.lab1.models;
 
 public class Data {
     private double sum;
-    private double max;
+    private double max = Double.NEGATIVE_INFINITY;
     private int count;
-
-    public Data() {
-        sum = 0.0;
-        max = Double.NEGATIVE_INFINITY;
-        count = 0;
-    }
 
     public void addValue(double value) {
         sum += value;
